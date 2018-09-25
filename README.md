@@ -1,5 +1,5 @@
 Git clone 
-  - watting 
+  - https://github.com/tranthithanhmai130495/shopping-cart-react-app.git 
   
 Code Install : 
   - npm install
