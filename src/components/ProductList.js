@@ -3,12 +3,12 @@ import {connect} from 'react-redux';
 import * as configs from './../constants/Config';
 
 import ProductItem from './ProductItem';
-import ProductNoSale from './ProductNoSale';
+//import ProductNoSale from './ProductNoSale';
 
 class ProductList extends Component {
   render() {
     let {products} = this.props;
-    console.log(products);
+    //console.log(products);
 
     return (
         <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
@@ -40,7 +40,7 @@ class ProductList extends Component {
 }
 
 const mapStateToProps = state => {
-  console.log(state);
+  //console.log(state);
   return {
     products: state.products
   }

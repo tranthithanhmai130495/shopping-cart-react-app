@@ -19,17 +19,17 @@ let defaultState = [
         canBuy: false
     },
     {
-        id: 'aplusatomation123',
-        name: 'aplus automation',
-        image: 'aplusautomation.jpg',
+        id: 'robo fig combo123',
+        name: 'robo fig combo',
+        image: 'robo_fig_combo.jpg',
         sumamry: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. At dicta asperiores veniam repellat unde debitis quisquam magnam magni ut deleniti!',
         price: 5,
         canBuy: true
     }, 
     {
-        id: 'aplusmedia123',
-        name: 'aplus media',
-        image: 'aplus-media.jpg',
+        id: 'target leap frog123',
+        name: 'target leap frog',
+        image: 'target-leap-frog.jpg',
         sumamry: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. At dicta asperiores veniam repellat unde debitis quisquam magnam magni ut deleniti!',
         price: 10,
         canBuy: false

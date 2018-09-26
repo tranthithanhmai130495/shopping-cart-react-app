@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
+import {connect} from 'react-redux';
+
 import CartItem from './CartItem';
 import Notify from './Notify';
 
 class Cart extends Component {
   render() {
+    let {items} = this.props;
+    console.log(items);
+
     return (
         <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
           <div className="panel panel-danger">
@@ -24,21 +29,9 @@ class Cart extends Component {
                   </tr>
                 </thead>
 
-                <tbody id="my-cart-body">
-                  <CartItem />
-                  <CartItem />
-                  <CartItem />
-                </tbody>
+                { this.showElementBody(items) }
+                { this.showElementFooter(items) }
 
-                <tfoot id="my-cart-footer">
-                  <tr>
-                    <th colSpan="6">Empty product in your cart</th>
-                  </tr>
-                  <tr>
-                    <td colSpan="4">There are <b>5</b> items in your shopping cart.</td>
-                    <td colSpan="2" className="total-price text-left">12 USD</td>
-                  </tr>
-              </tfoot>
               </table>
             </div>
           </div>
@@ -46,7 +39,40 @@ class Cart extends Component {
 
         </div>
     );
+  } //Close render
+
+  showElementBody(items) {
+    let xhtml = null;
+    
+    if(items.length > 0 ) {
+      xhtml = items.map((cartItem, index)=> {
+        return (
+          <CartItem key={index} cartItem={cartItem} index={index}/>
+        );
+      });
+    }
+    return <tbody id="my-cart-body">{xhtml}</tbody>
+  }
+
+  showElementFooter(items) {
+    let xhtml = <tr><th colSpan="6">Empty product in your cart</th></tr>
+
+    if(items.length > 0 ) {
+      xhtml = <tr>
+                <td colSpan="4">There are <b>5</b> items in your shopping cart.</td>
+                <td colSpan="2" className="total-price text-left">12 USD</td>
+              </tr>
+    }
+    return <tfoot id="my-cart-footer">{xhtml}</tfoot>
+  }
+
+} //Close Class Cart
+
+const mapStateToProps = state => {
+  console.log(state);
+  return {
+    items: state.carts
   }
 }
 
-export default Cart;
+export default connect(mapStateToProps, null)(Cart);

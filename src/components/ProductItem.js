@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class ProductItem extends Component {
   render() {
     let {product} = this.props;
-    console.log(product);
+    //console.log(product);
     return (
       <div className="media product">
         <div className="media-left">
