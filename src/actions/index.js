@@ -24,7 +24,14 @@ export const actUpdateProduct = (product, quantity) => {
 
 export const actRemoveProduct = (product) => {
   return {
-    type: types.UPDATE_PRODUCT,
+    type: types.REMOVE_PRODUCT,
     product
+  }
+}
+
+export const actChangeNotify = (content) => {
+  return {
+    type: types.CHANGE_NOTIFY,
+    content
   }
 }

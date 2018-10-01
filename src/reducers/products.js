@@ -1,5 +1,4 @@
 import * as types from './../constants/ActionType';
-import * as configs from './../constants/Config';
 
 let defaultState = [
     {
@@ -35,7 +34,7 @@ let defaultState = [
         canBuy: false
     },
     {
-        id: 'aplusatomation123',
+        id: 'aplusatomation123456',
         name: 'aplus automation',
         image: 'aplusautomation.jpg',
         sumamry: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. At dicta asperiores veniam repellat unde debitis quisquam magnam magni ut deleniti!',
@@ -43,7 +42,7 @@ let defaultState = [
         canBuy: true
     }, 
     {
-        id: 'aplusmedia123',
+        id: 'aplusmedia123456',
         name: 'aplus media',
         image: 'aplus-media.jpg',
         sumamry: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. At dicta asperiores veniam repellat unde debitis quisquam magnam magni ut deleniti!',
@@ -51,9 +50,6 @@ let defaultState = [
         canBuy: false
     }
 ];
-
-let catItems = JSON.parse(localStorage.getItem(configs.CARTS_FROM_LOACAL_STOGARE));
-defaultState = (catItems !== null && catItems.length > 0) ? catItems: defaultState;
 
 const products = (state = defaultState, action) => {
     switch(action.type) {
