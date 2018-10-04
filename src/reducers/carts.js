@@ -15,7 +15,7 @@ let getProductPosition = (cartItems, product) => {
 }
 
 const carts = (state = defaultState, action) => {
-  let {product,quantity} = action;
+  let { product,quantity } = action;
   let position = -1;
 
   switch(action.type) {

@@ -79,6 +79,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     changeNotify: (value) => {
       dispatch(actChangeNotify(value))
     },
+    
     updateProduct: (product, quantity) => {
       dispatch(actUpdateProduct(product, quantity))
     }

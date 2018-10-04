@@ -57,7 +57,7 @@ class Cart extends Component {
   }
 
   showElementFooter(items) {
-    console.log(items);
+    //console.log(items);
     let xhtml = <tr><th colSpan="6">Empty product in your cart</th></tr>
 
     if(items.length > 0 ) {
