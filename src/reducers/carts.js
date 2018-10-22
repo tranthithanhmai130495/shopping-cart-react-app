@@ -20,6 +20,7 @@ const carts = (state = defaultState, action) => {
 
   switch(action.type) {
     case types.BUY_PRODUCT:
+      //console.log(action);
       position = getProductPosition(state, product);
 
       if(position > -1 ) {
